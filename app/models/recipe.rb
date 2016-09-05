@@ -1,6 +1,6 @@
 class Recipe < ActiveRecord::Base
-  has_many :ingredients
-  has_many :directions
+  has_many :ingredients, dependent: :destroy
+  has_many :directions, dependent: :destroy
   belongs_to :user
   validates :title, presence: true
   validates :description, presence: true
