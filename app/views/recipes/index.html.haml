@@ -1,11 +1,17 @@
 %h3 Recipes
 
-- @recipes.each_slice(3) do |recipes|
+- unless @recipes.empty?
+  - @recipes.each_slice(3) do |recipes|
+    .row
+      - recipes.each do |recipe|
+        .col-md-4
+          .recipe
+            .image_wrapper
+              = link_to recipe do
+                = image_tag recipe.image.url, :class => "medium_img"
+              %h2= link_to recipe.title, recipe
+- else
   .row
-    - recipes.each do |recipe|
-      .col-md-4
-        .recipe
-          .image_wrapper
-            = link_to recipe do
-              = image_tag recipe.image.url, :class => "medium_img"
-            %h2= link_to recipe.title, recipe
+    .col-md-8.no-recipe
+      %p Looks like there are no recipes yet. Let's go ahead and add a recipe!
+      = link_to "Create a Recipe", new_recipe_path, :class => "btn btn-default"
