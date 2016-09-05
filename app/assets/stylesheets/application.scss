@@ -44,8 +44,10 @@
   }
 
   .alert{
+    width: 60%;
+    text-align: center;
     padding: 15px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     border: 1px solid transparent;
     border-radius: 5px;
     @include box-shadow;
@@ -54,7 +56,7 @@
   }
 
   .navbar{
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     @include box-shadow;
     border: none;
     .navbar-brand {
@@ -64,6 +66,7 @@
       font-size: 25px;
       a {
         color: $red;
+        text-decoration: none;
       }
     }
   }
@@ -100,7 +103,7 @@
   }
 
   #recipe_top {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
   #recipe_info, #ingredients, #directions{
@@ -109,6 +112,32 @@
     min-height: 360px;
     border-radius: 5px;
     padding: 2em 8%;
+  }
+
+  .error_notification{
+    display: none;
+  }
+
+  .error{
+    color: red;
+    font-size: 0.9em;
+  }
+
+  #errors{
+    background: #fcf7d7;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+
+  .btn-default{
+    background-color: #DB6161;
+    color: #fff;
+  }
+  .nested-fields{
+    height: 50px;
   }
 
   .recipe_image{

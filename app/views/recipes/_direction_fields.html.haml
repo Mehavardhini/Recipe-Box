@@ -1,4 +1,4 @@
 .form_inline_clearfix
   .nested-fields
-    = f.input :step, input_html: { class: "form-input form-control" }
+    = f.input :step,placeholder: 'Step',label: false, input_html: { class: "form-input form-control" }
     = link_to_remove_association "Remove Direction", f, class: "form-button btn btn-default"

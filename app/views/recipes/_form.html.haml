@@ -2,8 +2,8 @@
   - if @recipe.errors.any?
     #errors
       %p
-        = @recipe.errors.count
-        Prevented this recipe from saving
+        = pluralize(@recipe.errors.count,"error")
+        prevented this recipe from saving
       %ul
         - @recipe.errors.full_messages.each do |m|
           %li= m
